@@ -13,19 +13,19 @@ let food = {
 }
 
 function criarBG() {
-    context.fillStyle = "lightgreen";
+    context.fillStyle = "#1c1c1c";
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
 function criarCobrinha() {
     for(i = 0; i < snake.length; i++){
-        context.fillStyle = "green";
+        context.fillStyle = "#eee";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
 function drawFood() {
-    context.fillStyle = "red";
+    context.fillStyle = "#08affd";
     context.fillRect(food.x, food.y, box, box);
 }
 
@@ -48,6 +48,7 @@ function iniciarJogo() {
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
             alert('Game Over :(');
+            alert('Reinicie a página para jogar novamente!');
         }
     }
 
